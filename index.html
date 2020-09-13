@@ -1,0 +1,43 @@
+<!document html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Base Converter</title>
+    </head>
+    
+    <body>
+        <h1>#Base Converter</h1>
+        
+        <div class="container">
+            <div class="row rowspan">
+                <label for="value">Value: </label>
+                <input input-value type="text" value="0" placeholder="Ex: 123, 0xff, 0b1010, etc">
+            </div>
+            
+            <div class="row">
+                <label for="decimal">Decimal: </label>
+                <input input-decimal type="text" placeholder="" value="0">
+                <button btn-copy-dec title="Copy"><span class="material-icons">file_copy</span></button>
+            </div>
+            
+            <div class="row">
+                <label for="hexadecimal">Hexa: </label>
+                <input input-hexa type="text" placeholder="" value="0">
+                <button btn-copy-hex title="Copy"><span class="material-icons">file_copy</span></button>
+            </div>
+            
+            <div class="row">
+                <label for="binary">Binary: </label>
+                <input input-binary type="text" placeholder="" value="0">
+                <button btn-copy-bin title="Copy"><span class="material-icons">file_copy</span></button>
+            </div>
+        </div>
+        
+        <script src="Converter.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

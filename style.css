@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+*, *::first, *::last {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    min-height: 100vh;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    color: white;
+    animation-name: move;
+    animation-duration: 1s;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateY(-350%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+label {
+    color: #6c6ae6;
+}
+
+
+input[type=text] {
+    height: 2.3rem;
+    font-size: 1.5rem;
+    color: grey;
+    padding-left: 1.2rem;
+    outline-color: #6c6ae6;
+    margin-left: 10px;
+}
+
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 450px;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.row {
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.row button {
+    max-width: 50px;
+    padding: 5px 0px;
+    margin-left: 10px;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.row button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.3);
+    transition: 1s;
+}
+
+
+.rowspan {
+    grid-template-columns: 1fr 6fr;
+}
+
+
+.border {
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid black;
+}
+
+
+
+@media (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .row button {
+        display: none;
+    }
+    
+    .row input {
+        margin: 10px 0px;
+    }
+    
+    input[type=text] {
+        padding-left: 1rem;
+        margin-left: 0px;
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
